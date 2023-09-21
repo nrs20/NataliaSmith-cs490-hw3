@@ -1,5 +1,4 @@
 import Article from 'src/components/Article'
-
 export const QUERY = gql`
   query ArticleQuery($id: Int!) {
     article: post(id: $id) {
@@ -7,6 +6,9 @@ export const QUERY = gql`
       title
       body
       createdAt
+      user {
+        name
+      }
     }
   }
 `
